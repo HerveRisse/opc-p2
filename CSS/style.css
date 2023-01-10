@@ -2,6 +2,7 @@
     --main-color: #0065FC;
     --secondary-color: #DEEBFF;
     --bg-color: #D9D9D9;
+    --main-bg-color: #F2F2F2;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
@@ -46,7 +47,7 @@ nav {
     justify-content: space-evenly;
 }
 
-.nav-link {
+nav a {
     width: 50vw;
     text-align: center;
     padding: 33px 23px;
@@ -54,24 +55,22 @@ nav {
     border-bottom: var(--bg-color) 2px solid;
 }
 
-.nav-link:hover {
+nav a:hover {
     color: var(--main-color);
     border-bottom: var(--main-color) 2px solid;
 }
 
 /*    ---   section search & filter   ---   */
 
-.search-filter {
+#search-filter {
     margin: 30px 20px;
 }
 
-.search-filter p {
-    margin-top: 15px;
-}
-
-.search-container {
+#search-container {
     margin-top: 30px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 #location {
@@ -94,13 +93,13 @@ nav {
     border-radius: 0px 15px 15px 0px;
 }
 
-.filter-container {
+#filter-container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.filter-button {
+#filter-container button {
     border-radius: 25px;
     border: solid 2px var(--bg-color);
     margin-top: 15px;
@@ -115,30 +114,158 @@ nav {
     font-weight: 700;
 }
 
-.search-info {
+#search-info {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     gap: 10px;
+    margin-top: 15px;
 }
 
-.info-image-container {
-    width: 24px;
-    height: 24px;
+#search-info img {
     border: 1px solid var(--bg-color);
     border-radius: 50px;
     display: flex;
     justify-content: center;
-}
-
-.info-image-container img {
     width: 4px;
     height: 12px;
+    padding: 6px 10px;
 }
 
 /*    ---   section accommodation   ---   */
 
-.accommodation {
+#accommodation {
     display: flex;
     flex-wrap: wrap-reverse;
+}
+
+#all-accommodation {
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+#all-accommodation h2 {
+    margin-top: 26px;
+    margin-bottom: 19px;
+}
+
+.card-all-accommodation {
+    width: 335px;
+    height: 199px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 12px;
+}
+
+.card-all-accommodation>img {
+    width: 335px;
+    height: 124px;
+    border: 5px solid #FFFFFF;
+    border-radius: 20px 20px 0px 0px;
+}
+
+/*    ---   section most popular   ---   */
+
+#most-popular {
+    background-color: var(--main-bg-color);
+    padding: 20px;
+}
+
+#most-popular :first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+#card-container-most-popular {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-most-popular {
+    width: 334px;
+    height: 144px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.card-most-popular>img {
+    width: 137px;
+    height: 144px;
+    border: 5px solid #FFFFFF;
+    border-radius: 20px 0 0 20px;
+}
+
+.card-most-popular h3 {
+    margin-top: 16px;
+}
+
+.card-most-popular p {
+    margin-top: 7px;
+}
+
+.card-most-popular>div>div {
+    align-self: flex-end;
+    display: flex;
+}
+
+.card-most-popular>div>div img {
+    width: 12px;
+    height: 12px;
+}
+
+/*    ---   section activity  ---   */
+
+#activity {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+#activity h2 {
+    margin-bottom: 24px;
+}
+
+#activity>div {
+    width: 334px;
+    height: 190px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+#activity>div img {
+    width: 334px;
+    height: 134px;
+    border-radius: 20px 20px 0 0;
+
+}
+
+#activity>div h3 {
+    padding: 19px 21px 68px 20px;
+}
+
+/*    ---   section footer  ---   */
+
+footer {
+    background-color: var(--main-bg-color);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+footer>div>h3 {
+    margin-bottom: 20px;
+}
+
+footer>div>div {
+    height: 81px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+
 }
