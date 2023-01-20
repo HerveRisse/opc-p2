@@ -161,10 +161,19 @@ nav a:hover {
 }
 
 .card-all-accommodation>img {
-    width: 335px;
+    width: calc(100% - 10px);
     height: 124px;
     border: 5px solid #FFFFFF;
     border-radius: 20px 20px 0px 0px;
+}
+
+.card-all-accommodation>div {
+    margin-left: 16px;
+    margin-top: 4px;
+    margin-bottom: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
 /*    ---   section most popular   ---   */
@@ -177,6 +186,9 @@ nav a:hover {
 #most-popular :first-child {
     display: flex;
     justify-content: space-between;
+    /*align-items: center;
+    margin-bottom: 26px;
+    margin-top: 8px;*/
 }
 
 #card-container-most-popular {
@@ -195,7 +207,7 @@ nav a:hover {
 
 .card-most-popular>img {
     width: 137px;
-    height: 144px;
+    height: calc(100% - 10px);
     border: 5px solid #FFFFFF;
     border-radius: 20px 0 0 20px;
 }
@@ -208,9 +220,22 @@ nav a:hover {
     margin-top: 7px;
 }
 
-.card-most-popular>div>div {
-    align-self: flex-end;
+.card-most-popular>div {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-top: 16px;
+    margin-right: 13px;
+    margin-bottom: 12px;
+}
+
+.card-most-popular>div>div {
+    display: flex;
+}
+
+.card-most-popular>div>div:first-child {
+    flex-direction: column;
 }
 
 .card-most-popular>div>div img {
@@ -255,6 +280,7 @@ footer {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
+    gap: 40px;
 }
 
 
@@ -267,5 +293,6 @@ footer>div>div {
     width: 210px;
     display: flex;
     flex-direction: column;
+    gap: 15px;
 
 }
