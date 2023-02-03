@@ -7,11 +7,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
 p,
 a,
 button,
 input {
-    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
@@ -73,6 +76,10 @@ nav a:hover {
     justify-content: center;
 }
 
+#filter-container>button:hover {
+    background-color: var(--secondary-color);
+}
+
 #location {
     background-color: var(--bg-color);
     width: 50px;
@@ -92,6 +99,17 @@ nav a:hover {
     height: 50px;
     border-radius: 0px 15px 15px 0px;
 }
+
+#search-alt {
+    background-color: var(--main-color);
+    width: 132px;
+    height: 50px;
+    border-radius: 0px 15px 15px 0px;
+    color: var(--main-bg-color);
+    font-weight: 700;
+    display: none;
+}
+
 
 #filter-container {
     display: flex;
@@ -142,6 +160,10 @@ nav a:hover {
 #all-accommodation {
     background-color: #FFFFFF;
     padding: 20px;
+}
+
+#all-accommodation>a {
+    display: none;
 }
 
 #all-accommodation h2 {
@@ -228,6 +250,7 @@ nav a:hover {
     background-color: #FFFFFF;
     display: flex;
     margin-bottom: 10px;
+    box-shadow: 0px 3px 15px rgb(0 0 0 / 10%);
 }
 
 /*
@@ -292,6 +315,7 @@ nav a:hover {
     margin-top: 16px;
     margin-right: 13px;
     margin-bottom: 12px;
+    width: 60%;
 }
 
 
@@ -300,6 +324,7 @@ nav a:hover {
 #activity {
     margin-top: 50px;
     padding: 20px;
+    height: auto;
 }
 
 #activity h2 {
@@ -307,22 +332,33 @@ nav a:hover {
 }
 
 #activity>div {
-    width: 334px;
-    height: 190px;
-    border-radius: 20px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 43px;
 }
 
-#activity>div img {
-    width: 334px;
-    height: 134px;
-    border-radius: 20px 20px 0 0;
-
+#activity>div>div>div>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 #activity>div h3 {
     padding: 19px 21px 68px 20px;
+}
+
+.card-activity {
+    width: 334px;
+    height: 190px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-activity>div {
+    height: 134px;
+    width: 100%;
 }
 
 /*    ---   section footer  ---   */
@@ -359,17 +395,36 @@ footer>div>div {
 
     header {
         flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        justify-content: flex-end;
     }
 
     nav a {
         border-top: var(--bg-color) 2px solid;
         border-bottom: none;
+        width: 10vw;
     }
 
     nav a:hover {
         color: var(--main-color);
         border-top: var(--main-color) 2px solid;
         border-bottom: none;
+    }
+
+    #search {
+        display: none;
+    }
+
+    #search-alt {
+        display: inline-block;
+    }
+
+
+    #search-filter>h1 {
+        margin-bottom: 13px;
     }
 
     #search-container {
@@ -387,6 +442,13 @@ footer>div>div {
         padding-inline: 40px;
     }
 
+    #all-accommodation>a {
+        display: inline-block;
+        margin-top: 40px;
+        font-weight: 700;
+    }
+
+
     .card-all-accommodation {
         width: 246px;
     }
@@ -403,16 +465,36 @@ footer>div>div {
     }
 
     #card-container-most-popular {
-        justify-content: space-evenly;
+        gap: 23px;
     }
 
     .card-most-popular {
-        width: 232px;
+        width: 252px;
+    }
+
+    .card-most-popular>div:last-child {
+        margin-top: 0;
+    }
+
+    #activity {
+        padding: 0;
     }
 
     #activity>div {
         display: flex;
     }
+
+    .card-activity {
+        width: 182px;
+        height: 267px;
+    }
+
+    .card-activity>div {
+        height: 211px;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -430,4 +512,18 @@ footer>div>div {
         margin-top: 0;
         margin-left: 40px;
     }
+
+    .card-activity {
+        width: 302px;
+        height: 444px;
+    }
+
+    .card-activity>div {
+        height: 389px;
+    }
+
+    footer {
+        justify-content: space-around;
+    }
+
 }
