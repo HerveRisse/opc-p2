@@ -93,6 +93,12 @@ nav a:hover {
     height: 50px;
 }
 
+#search-input::placeholder {
+    color: #000;
+    font-weight: 700;
+    padding-left: 16px;
+}
+
 #search {
     background-color: var(--main-color);
     width: 50px;
@@ -121,7 +127,7 @@ nav a:hover {
     border-radius: 25px;
     border: solid 2px var(--bg-color);
     margin-top: 15px;
-    padding-left: 10px;
+    padding-inline: 10px;
     width: 160px;
     height: 50px;
     display: flex;
@@ -241,6 +247,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     margin-top: 26px;
+    gap: 23px;
 }
 
 .card-most-popular {
@@ -431,6 +438,13 @@ footer>div>div {
         justify-content: flex-start;
     }
 
+    #filter-container button {
+        padding-inline: 20px;
+        width: auto;
+        font-size: 17px;
+    }
+
+
     #accommodation {
         flex-wrap: wrap;
     }
@@ -456,7 +470,8 @@ footer>div>div {
     #card-container-all-accommodation {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        gap: 31px;
     }
 
     #most-popular {
@@ -481,7 +496,7 @@ footer>div>div {
     }
 
     #activity>div {
-        display: flex;
+        gap: 30px;
     }
 
     .card-activity {
@@ -512,6 +527,16 @@ footer>div>div {
         margin-top: 0;
         margin-left: 40px;
     }
+
+    .card-most-popular {
+        width: 100%;
+    }
+
+    #activity>div {
+        gap: 43px;
+        justify-content: space-between;
+    }
+
 
     .card-activity {
         width: 302px;
